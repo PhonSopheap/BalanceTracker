@@ -1,0 +1,102 @@
+.landing-header {
+    background: none;
+}
+
+.landing-header__content {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding: $l-size 0;
+}
+
+.landing-header__title {
+    color: black;
+    font-family: Montserrat;
+    text-decoration: none;
+
+    h2 {
+        margin: 0;
+        font-size: 3rem;
+        font-weight: 500;
+        color: $dark-blue;
+    }
+}
+
+.header-logo {
+    padding-right: $m-size;
+    padding-top: 0.5rem;
+}
+
+.toggle {
+    width: 100%;
+    padding: 10px 20px;
+    background: $dark-blue;
+    box-sizing: border-box;
+    color: #fff;
+    font-size: 30px;
+    display: none;
+}
+
+@media(max-width: $desktop-breakpoint + 2) {
+
+    .header-logo {
+        display: none;
+    }
+
+    .toggle {
+        display: block;
+    }
+
+    .title-container {
+        display: none;
+    }
+
+    .menu-container {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        background-color: lighten($faded-blue, 10%);
+        padding: $m-size;
+        border-bottom: 2px solid $dark-blue;
+
+        button {
+            text-align: center;
+            padding: $m-size;
+        }
+
+    }
+
+    .landing-content-container {
+        padding: 0;
+    }
+
+    .landing-header__content {
+        padding: 0;
+    }
+
+    .active {
+        display: flex;
+        position: absolute;
+        z-index: 10;
+        margin-top: 12rem;
+    }
+}
+
+.responsive-header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 100rem;
+
+}
+
+.responsive-title {
+    font-family: Nunito;
+    font-weight: 500;
+    font-size: 3rem;
+
+}
+
+.responsive-menu {
+    //this is just icon button
+}

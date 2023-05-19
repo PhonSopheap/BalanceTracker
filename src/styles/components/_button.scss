@@ -1,0 +1,44 @@
+.button {
+    background-color: $dark-blue;
+    border: none;
+    color: white;
+    font-size: $font-size-large;
+    display: inline-block;
+    font-weight: 300;
+    line-height: 1;
+    padding: $s-size;
+    text-decoration: none;
+    border-radius: 0.5rem;
+    font-family: Montserrat;
+}
+
+.button--link {
+    background: none;
+}
+
+.button--login {
+    padding: $s-size $l-size $s-size $l-size;
+    font-weight: 500;
+}
+
+.button--login:hover {
+    background-color: lighten($dark-blue, 12%)
+}
+
+.button--logout {
+    background: none;
+    color: black;
+    font-weight: 400;
+}
+
+
+.button--menu {
+    background: none;
+    color: black;
+    font-weight: 400;
+    padding: 0;
+}
+
+.button--secondary {
+    background: red;
+}

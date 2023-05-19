@@ -1,0 +1,22 @@
+@import './base/settings';
+@import './base/base';
+@import './components/button';
+@import './components//chart';
+@import './components/content-container';
+@import './components/form';
+@import './components/header';
+@import './components/inputs';
+@import './components/input-group';
+@import './components/list';
+@import './components/loader';
+@import './components/modal';
+@import './components/page-header';
+@import './components/visibility';
+
+@import './landing/landing';
+@import './landing/landing-header';
+@import './landing/landing-text';
+@font-face {
+    font-family: 'Montserrat';
+    src: url("../assets/Montserrat-Regular.ttf");
+}
