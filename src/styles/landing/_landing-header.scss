@@ -10,7 +10,7 @@
 }
 
 .landing-header__title {
-    color: black;
+    color: red;
     font-family: Montserrat;
     text-decoration: none;
 
@@ -25,6 +25,12 @@
 .header-logo {
     padding-right: $m-size;
     padding-top: 0.5rem;
+
+}
+
+.header-logo img{
+    width: 5rem;
+    height: 5rem;
 }
 
 .toggle {
@@ -54,6 +60,7 @@
     .menu-container {
         display: none;
         width: 100%;
+        
         flex-direction: column;
         background-color: lighten($faded-blue, 10%);
         padding: $m-size;

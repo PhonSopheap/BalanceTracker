@@ -1,5 +1,5 @@
 import React from "react";
-import expenseLogo from "../assets/expenseLogo.png";
+import logo from "../assets/logo.png";
 import { useNavigate } from "react-router-dom";
 
 const notConnected = () => {
@@ -21,10 +21,10 @@ export const LandingHeader = () => {
         <div className="landing-content-container">
           <div className="landing-header__content">
             <div className="header-logo">
-              <img src={expenseLogo} alt="ExpanseLog" />
+              <img src={logo} alt="ExpanseLog" />
             </div>
             <div className="landing-header__title title-container">
-              <h2>Balance Tracker</h2>
+              <h2>Money Tracker</h2>
             </div>
             <div className="menu-container">
               <button className="button button--menu" onClick={notConnected}>

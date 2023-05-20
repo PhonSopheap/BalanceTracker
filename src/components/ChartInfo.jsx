@@ -81,7 +81,9 @@ const ChartInfo = (props) => {
 
     return (
         <div>
+            
             <MyChart
+                
                 chartData={chartData}
                 selectedStartDate={props.filters.startDate}
                 selectedEndDate={props.filters.endDate}

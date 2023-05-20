@@ -16,13 +16,16 @@
     background: none;
 }
 
+
+
 .button--login {
     padding: $s-size $l-size $s-size $l-size;
     font-weight: 500;
 }
 
 .button--login:hover {
-    background-color: lighten($dark-blue, 12%)
+    background-color: lighten($dark-blue, 12%);
+    transform: scale(1.05);
 }
 
 .button--logout {

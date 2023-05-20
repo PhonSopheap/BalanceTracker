@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import logo from "../assets/logo.png";
 export default function SignIn(props) {
   const [username, setUserName] = useState("");
   const [password, setPassword] = useState("");
@@ -24,19 +24,20 @@ export default function SignIn(props) {
     }
   };
   return (
-    <>
-      <div>
-        <div className="page-header">
-          <div className="content-container">
-            <h1 className="page-header__title">
-              <span>Login with your username and password</span>
-            </h1>
-          </div>
-        </div>
+    <><div className="page">
+      <div className="cover">
 
-        <div className="content-container">
+
+        <div className="content-container margincontainer">
           <form className="form" onSubmit={onSubmit}>
             {error && <p className="form__error">{error}</p>}
+
+            <div className="header-logo logocenter">
+              <img src={logo} alt="ExpanseLog" />
+              <h2 className="h2signin">Money Tracker</h2>
+            </div>
+
+            <h2 className="login">Login</h2>
             <input
               type="text"
               placeholder="username"
@@ -53,14 +54,15 @@ export default function SignIn(props) {
               value={password}
               onChange={onPasswordChange}
             />
-            <div>
-              <button className="button button--login" type="submit">
+            <div className="buttomcenter">
+              <button className="button button--login  button--loginon :hover " type="submit">
                 Login
               </button>
             </div>
           </form>
         </div>
       </div>
+    </div>
     </>
   );
 }

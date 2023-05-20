@@ -1,7 +1,12 @@
 import React from 'react'
-import pigIllustration from '../assets/pigIllustration.png'
+import money from '../assets/money.png'
+import { useNavigate } from "react-router-dom";
 
 const LandingText = ({ startLogin }) => {
+    const navigate = useNavigate();
+    const  ExpanseDashboardPage= () => {
+        navigate("/dashboard");
+      };
     return (
         <div className="landing-body">
             <div className="landing-text-info-area">
@@ -11,10 +16,10 @@ const LandingText = ({ startLogin }) => {
                 your spending with Expense Tracker. An online
                     tracking tool to help you better understand your
                 habits and make measurable change. </p>
-                <button className="button button--login" onClick={startLogin}>Get Started</button>
+                <button className="button button--login" onClick={ExpanseDashboardPage}>Get Started</button>
             </div>
             <div>
-                <img className="pig" src={pigIllustration} alt='pigIllustration'/>
+                <img className="pig" src={money} alt='pigIllustration'/>
             </div>
         </div>
     )
