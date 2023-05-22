@@ -1,4 +1,25 @@
-.Resize-ExpenseSummary{
-    width: 5em;
-    height: 10em;
+/* .Resize-ExpenseSummary{
+    width: 20rem;
+    height: 20rem;
+}
+.marginexpense{
+    margin: auto;
+} */
+.centerboth{
+    align-items: center;
+}
+
+.resize-chartinfo{
+    width: 65%;
+    display:inline-block;
+    justify-content: center;
+    align-items: center;
+
+
+}
+.resize-categoryinfo{
+    width: 35%;
+    display:inline-block;
+    justify-content: center;
+    align-items: center;
 }

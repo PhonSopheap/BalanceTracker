@@ -1,7 +1,8 @@
 .page-header {
     background: $off-white;
     margin-bottom: $l-size;
-    padding: $l-size 0;
+    //padding: $l-size 0;
+    //margin: 0;
 }
 
 .page-header__title {
@@ -14,7 +15,7 @@
 }
 
 .page-header__actions {
-    margin-top: $m-size;
+    //margin-top: $m-size;
 }
 
 .cover{

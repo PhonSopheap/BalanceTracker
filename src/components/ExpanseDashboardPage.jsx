@@ -7,6 +7,7 @@ import ChartInfo from "./ChartInfo";
 import CatagoriesInfo from "./CatagoriesInfo";
 import Header from "./Header";
 import "./ExpanseDashboardPage"
+import "./ExpanseDashboardPage.css"
 //import ResizableComponent from './ResizableComponent';
 
 const ExpanseDashboardPage = () => {
@@ -36,18 +37,26 @@ const ExpanseDashboardPage = () => {
   };
   return (
     <>
-      <Header />
+      {/* <Header /> */}
 
-      <div className="Resize-ExpenseSummary">
+      <div className="marginexpense">
         <ExpensesSummary
           expenseCount={expenseCount}
           expensesTotal={expensesTotal}
         />
       </div>
-
-
+      <div className="centerboth">
+      
+      <div className='resize-chartinfo'>
       <ChartInfo expenses={expenses} filters={filters} />
+      </div>
+      <div className='resize-categoryinfo'>
       <CatagoriesInfo expenses={expenses} />
+      </div>
+      </div>
+      
+
+
       <ExpenseListFilters
         filters={filters}
         setTextFilter={setTextFilter}

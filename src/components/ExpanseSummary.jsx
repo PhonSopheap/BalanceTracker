@@ -17,11 +17,11 @@ const ExpanseSummary = ({ expenseCount, expensesTotal }) => {
     return (
         //<div className="size">
             <div className="page-header">
-                <div className="content-container">
-                    <h2 className="page-header__title">Viewing <span>{expenseCount}</span> {expenseWord} totaling <span>{formattedExpensesTotal}</span></h2>
-                    <div className="page-header__actions">
+                <div className="content-container header__content">
+                    <h2 className="page-header__title ">Viewing <span>{expenseCount}</span> {expenseWord} totaling <span>{formattedExpensesTotal}</span></h2>
+                    <div className="page-header__actions ">
                         <button style={{'marginRight': '1rem'}} className="button" onClick={toCreateExpense}>Add Expense</button>
-                        <button className="button" onClick={toCreateIncome}>Add Income</button>
+                        <button className="button" onClick={toCreateIncome}>Add Incomee</button>
                     </div>
                 </div>
             </div>
