@@ -53,18 +53,14 @@ const CatagoriesInfo = (props) => {
     }
 
     const getCatagoryData = () => {
-        console.log("Hi")
         const expenseCatagories = props.expenses.map((expense) => expense.catagory);
         const expenseAmounts = props.expenses.map((expense) => expense.amount);
-        console.log("expenseCatagories", expenseCatagories)
-        console.log("expenseAmounts", expenseAmounts)
         let combinedList = expenseAmounts.map(function (item, i) {
             return [item, [expenseCatagories[i]]];
         });
 
         const catagoryList = uniqueCatagories(expenseCatagories);
         const amountList = addedCatagoryValues(combinedList, catagoryList);
-        console.log("amountList", amountList);
 
         setCatagoryData({
 

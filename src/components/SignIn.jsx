@@ -40,7 +40,7 @@ export default function SignIn(props) {
             <h2 className="login">Login</h2>
             <input
               type="text"
-              placeholder="username"
+              placeholder="Username"
               autoFocus
               className="text-input"
               value={username}
@@ -48,7 +48,7 @@ export default function SignIn(props) {
             />
             <input
               type="password"
-              placeholder="password"
+              placeholder="Password"
               autoFocus
               className="text-input"
               value={password}

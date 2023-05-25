@@ -18,7 +18,7 @@ export default function SignUp(props){
                 <h2 className="signup">Sign up</h2>
                 <input
                   type="text"
-                  placeholder="username"
+                  placeholder="Username"
                   
                   className="text-input"
                   
@@ -34,11 +34,8 @@ export default function SignUp(props){
                 />
                 <input
                   type="password"
-                  placeholder="password"
-                  
+                  placeholder="Password"
                   className="text-input"
-                  
-                  
                 />
                 <input
                   type="password"

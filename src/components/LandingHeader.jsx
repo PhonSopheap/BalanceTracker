@@ -24,7 +24,7 @@ export const LandingHeader = () => {
               <img src={logo} alt="ExpanseLog" />
             </div>
             <div className="landing-header__title title-container">
-              <h2>Money Tracker</h2>
+              <h2 style={{'fontWeight': 'bold'}}>Money Tracker</h2>
             </div>
             <div className="menu-container">
               <button className="button button--menu" onClick={notConnected}>

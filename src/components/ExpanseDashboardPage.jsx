@@ -7,12 +7,11 @@ import ChartInfo from "./ChartInfo";
 import CatagoriesInfo from "./CatagoriesInfo";
 import Header from "./Header";
 import "./ExpanseDashboardPage"
-//import ResizableComponent from './ResizableComponent';
 
 const ExpanseDashboardPage = () => {
   const [filters, setFilters] = useState({
-    startDate: "2023-05-01",
-    endDate: "2023-05-010",
+    startDate: moment().format('YYYY-MM-01'),
+    endDate: moment().endOf('month').format('YYYY-MM-DD'),
   });
   const setTextFilter = (value) => {
     //Handle some logic filter by text
@@ -36,14 +35,14 @@ const ExpanseDashboardPage = () => {
   };
   return (
     <>
-      <Header />
+      {/* <Header /> */}
 
-      <div className="Resize-ExpenseSummary">
+      {/* <div className="Resize-ExpenseSummary"> */}
         <ExpensesSummary
           expenseCount={expenseCount}
-          expensesTotal={expensesTotal}
+          expensesTotal={expensesTotal()}
         />
-      </div>
+      {/* </div> */}
 
 
       <ChartInfo expenses={expenses} filters={filters} />
@@ -61,14 +60,12 @@ const ExpanseDashboardPage = () => {
 };
 
 // Mockup Data
-const expenseCount = 100;
-const expensesTotal = 100000;
 const expenses = [
   {
     id: "1",
     description: "Buy Food",
     createdAt: "2023-05-01",
-    amount: 2000,
+    amount: 1000,
     catagory: "Food",
   },
   {
@@ -87,32 +84,61 @@ const expenses = [
   },
   {
     id: "4",
-    description: "Buy Beer",
+    description: "Buy Vegetable",
     createdAt: "2023-05-04",
     amount: 100,
-    catagory: "Beer",
+    catagory: "Vegetable",
   },
   {
     id: "5",
-    description: "Buy Beer4",
+    description: "Buy Vegetable4",
     createdAt: "2023-05-07",
     amount: 100,
-    catagory: "Beer3",
+    catagory: "Vegetable3",
   },
   {
     id: "6",
-    description: "Buy Beer10",
+    description: "Buy Vegetable10",
+    createdAt: "2023-05-19",
+    amount: 850,
+    catagory: "Vegetable5",
+  },
+  {
+    id: "7",
+    description: "Buy Vegetable10",
     createdAt: "2023-05-19",
     amount: 800,
-    catagory: "Beer8",
+    catagory: "Vegetable8",
   },
   {
-    id: "6",
-    description: "Buy Beer10",
-    createdAt: "2023-05-19",
-    amount: 900,
-    catagory: "Beer8",
+    id: "8",
+    description: "Buy Vegetable11",
+    createdAt: "2023-05-22",
+    amount: 500,
+    catagory: "Vegetable8",
+  },
+  {
+    id: "8",
+    description: "Buy Vegetable11",
+    createdAt: "2023-07-22",
+    amount: 500,
+    catagory: "Vegetable8",
+  },
+  {
+    id: "9",
+    description: "Buy Vegetable11",
+    createdAt: "2023-05-25",
+    amount: 400,
+    catagory: "Vegetable8",
   },
 ];
+const expenseCount = expenses.length;
+const expensesTotal = ()=>{
+  let total = 0;
+  for(let i=0; i<expenses.length; i++){
+    total+=expenses[i].amount;
+  }
+  return total;
+}
 
 export default ExpanseDashboardPage;
